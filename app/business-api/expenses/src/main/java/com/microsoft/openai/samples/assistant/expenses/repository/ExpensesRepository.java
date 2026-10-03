@@ -17,28 +17,25 @@ public interface ExpensesRepository extends JpaRepository<ExpensesEntity, Long> 
 
     List<ExpensesEntity> findByUserIdAndCategory(String userId, String category);
 
-    @Query("SELECT e FROM ExpensesEntity e WHERE e.userId = :userId " +
-           "AND e.expenseDate BETWEEN :startDate AND :endDate")
+    @Query("SELECT e FROM ExpensesEntity e WHERE e.userId = :userId AND e.expenseDate BETWEEN :startDate AND :endDate")
     List<ExpensesEntity> findByUserIdAndDateRange(
-        @Param("userId") String userId,
-        @Param("startDate") LocalDateTime startDate,
-        @Param("endDate") LocalDateTime endDate
+            @Param("userId") String userId,
+            @Param("startDate") LocalDateTime startDate,
+            @Param("endDate") LocalDateTime endDate
     );
 
-    @Query("SELECT SUM(e.amount) FROM ExpensesEntity e WHERE e.userId = :userId " +
-           "AND e.expenseDate BETWEEN :startDate AND :endDate")
+    @Query("SELECT SUM(e.amount) FROM ExpensesEntity e WHERE e.userId = :userId AND e.expenseDate BETWEEN :startDate AND :endDate")
     BigDecimal getTotalExpenses(
-        @Param("userId") String userId,
-        @Param("startDate") LocalDateTime startDate,
-        @Param("endDate") LocalDateTime endDate
+            @Param("userId") String userId,
+            @Param("startDate") LocalDateTime startDate,
+            @Param("endDate") LocalDateTime endDate
     );
 
-    @Query("SELECT SUM(e.amount) FROM ExpensesEntity e WHERE e.userId = :userId " +
-           "AND e.category = :category AND e.expenseDate BETWEEN :startDate AND :endDate")
+    @Query("SELECT SUM(e.amount) FROM ExpensesEntity e WHERE e.userId = :userId AND e.category = :category AND e.expenseDate BETWEEN :startDate AND :endDate")
     BigDecimal getTotalExpensesByCategory(
-        @Param("userId") String userId,
-        @Param("category") String category,
-        @Param("startDate") LocalDateTime startDate,
-        @Param("endDate") LocalDateTime endDate
+            @Param("userId") String userId,
+            @Param("category") String category,
+            @Param("startDate") LocalDateTime startDate,
+            @Param("endDate") LocalDateTime endDate
     );
 }
