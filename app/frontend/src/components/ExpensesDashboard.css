@@ -1,0 +1,124 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-icon {
+  font-size: 32px;
+  min-width: 50px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.card-value {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0078d4;
+}
+
+.chart-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.categories-list {
+  margin-top: 20px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.category-emoji {
+  font-size: 24px;
+  min-width: 30px;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-progress {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0078d4, #50e6ff);
+  transition: width 0.3s ease;
+}
+
+.details-list {
+  margin-top: 20px;
+}
+
+.expense-item {
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.expense-amount {
+  color: #d13438;
+  font-weight: bold;
+}
+
+.expense-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.category-badge,
+.date-badge {
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 11px;
+}
