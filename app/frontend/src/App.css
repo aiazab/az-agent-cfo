@@ -1,0 +1,31 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* RTL Specific Styles */
+[dir='rtl'] {
+  text-align: right;
+}
+
+[dir='rtl'] .message {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .header {
+  flex-direction: row-reverse;
+}
+
+[dir='ltr'] {
+  text-align: left;
+}
